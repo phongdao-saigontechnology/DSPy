@@ -1,0 +1,57 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Daniel works at an electronics store, and he claims that the popularity of a television (measured in number of sales) is inversely proportional to its cost. If 15 customers buy a television that costs $\\$$1500, according to Daniel's theory, how many customers would buy a television that costs $\\$$2500?",
+        "reasoning": "If the popularity of a television (number of sales) is inversely proportional to its cost, then we can write the relationship as:\n\n\\[\nP \\cdot C = k,\n\\]\n\nwhere \\(P\\) is the number of sales, \\(C\\) is the cost, and \\(k\\) is a constant. From the given information, when \\(P = 15\\) and \\(C = 1500\\), we can solve for \\(k\\):\n\n\\[\nk = 15 \\cdot 1500 = 22500.\n\\]\n\nNow, we are asked to find the number of customers (\\(P\\)) when the cost (\\(C\\)) is \\$2500. Using the same relationship \\(P \\cdot C = k\\), we substitute \\(k = 22500\\) and \\(C = 2500\\):\n\n\\[\nP \\cdot 2500 = 22500.\n\\]\n\nSolving for \\(P\\), we divide both sides by 2500:\n\n\\[\nP = \\frac{22500}{2500} = 9.\n\\]\n\nThus, 9 customers would buy a television that costs \\$2500.",
+        "answer": "9"
+      },
+      {
+        "augmented": true,
+        "question": "A set of four consecutive integers has a sum of 22. If each integer of the set is increased by 2 and then multiplied by 20, what is the sum of the new set of integers?",
+        "reasoning": "Let the four consecutive integers be $n$, $n+1$, $n+2$, and $n+3$. Their sum is given as $n + (n+1) + (n+2) + (n+3) = 4n + 6$. Since the sum is 22, we have:\n\\[\n4n + 6 = 22.\n\\]\nSolving for $n$, we get:\n\\[\n4n = 16 \\quad \\implies \\quad n = 4.\n\\]\nThus, the integers are $4$, $5$, $6$, and $7$.\n\nIf each integer is increased by 2, the new integers become $6$, $7$, $8$, and $9$. Multiplying each by 20 gives:\n\\[\n6 \\cdot 20 = 120, \\quad 7 \\cdot 20 = 140, \\quad 8 \\cdot 20 = 160, \\quad 9 \\cdot 20 = 180.\n\\]\nThe sum of these new integers is:\n\\[\n120 + 140 + 160 + 180 = 600.\n\\]\n\nThus, the sum of the new set of integers is $\\boxed{600}$.",
+        "answer": "600"
+      },
+      {
+        "augmented": true,
+        "question": "If $(ax+b)(2x+3)=20x^2+44x+21$, where $a$ and $b$ are two distinct integers, what is the value of the sum $a+b$?",
+        "reasoning": "Expanding the left-hand side of the equation $(ax+b)(2x+3)$ gives:\n\\[\n(ax+b)(2x+3) = 2ax^2 + 3ax + 2bx + 3b = 2ax^2 + (3a+2b)x + 3b.\n\\]\nEquating this to the given polynomial $20x^2 + 44x + 21$, we match coefficients:\n1. The coefficient of $x^2$: $2a = 20 \\implies a = 10$.\n2. The coefficient of $x$: $3a + 2b = 44 \\implies 3(10) + 2b = 44 \\implies 30 + 2b = 44 \\implies 2b = 14 \\implies b = 7$.\n3. The constant term: $3b = 21 \\implies 3(7) = 21$, which is consistent.\n\nThus, $a = 10$ and $b = 7$, and their sum is $a + b = 10 + 7 = \\boxed{17}$.",
+        "answer": "17"
+      },
+      {
+        "augmented": true,
+        "question": "Evaluate $\\lceil 8.8 \\rceil+\\lceil -8.8 \\rceil$.",
+        "reasoning": "The ceiling function $\\lceil x \\rceil$ returns the smallest integer greater than or equal to $x$. For $8.8$, $\\lceil 8.8 \\rceil = 9$. For $-8.8$, $\\lceil -8.8 \\rceil = -8$, since $-8$ is the smallest integer greater than or equal to $-8.8$. Adding these values gives $9 + (-8) = 1$.",
+        "answer": "1"
+      }
+    ],
+    "signature": {
+      "instructions": "You are a mathematics tutor. Given the mathematical `question`, provide a detailed step-by-step `reasoning` process to arrive at the `answer`. Ensure that your explanation is clear and easy to follow, reinforcing the underlying mathematical concepts.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "${question}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "${answer}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "2.6.15",
+      "cloudpickle": "3.1"
+    }
+  }
+}

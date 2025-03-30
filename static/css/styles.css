@@ -1,0 +1,72 @@
+.comparison-card {
+    height: 100%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.result-area {
+    min-height: 400px;
+}
+
+.reasoning-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+}
+
+.answer-box {
+    background-color: #e9f7ef;
+    border: 1px solid #d5f5e3;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 60px;
+    overflow-y: auto;
+    font-weight: bold;
+}
+
+#problem-input {
+    font-size: 1rem;
+}
+
+/* Styling for math expressions */
+.math {
+    font-size: 1.1rem;
+}
+
+/* Make the cards equal height */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comparison-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+#loading {
+    padding: 20px;
+}
+
+/* Highlight differences */
+.different {
+    background-color: #ffe6e6;
+}

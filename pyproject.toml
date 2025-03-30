@@ -1,0 +1,15 @@
+[project]
+name = "devday2025"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "dspy>=2.6.15",
+    "fastapi>=0.115.12",
+    "math-equivalence",
+    "mlflow>=2.21.2",
+    "uvicorn>=0.34.0",
+]
+
+[tool.uv.sources]
+math-equivalence = { git = "https://github.com/hendrycks/math.git" }
