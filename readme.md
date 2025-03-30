@@ -22,7 +22,7 @@ export OPENAI_API_KEY=your_api_key_here
 The `train_math_reasoning.py` script allows you to train and optimize a math reasoning model:
 
 ```bash
-python train_math_reasoning.py --model openai/gpt-4o-mini --teacher_model openai/gpt-4o --threads 4 --max_demos 4 --save_path math_model.pkl
+python train_math_reasoning.py --model openai/gpt-4o-mini --teacher_model openai/gpt-4o --threads 4 --max_demos 4 --save_path math_model.json
 ```
 
 Key arguments:
@@ -39,7 +39,7 @@ Key arguments:
 After training a model, you can use the `solve_math_problem.py` script to solve math problems:
 
 ```bash
-python solve_math_problem.py --model_path math_model.pkl --problem "What is the smallest integer value of c such that the function f(x) = (x^2 + 1)/(x^2 - x + c) has domain of all real numbers?" --show_reasoning
+python solve_math_problem.py --model_path math_model.json --problem "What is the smallest integer value of c such that the function f(x) = (x^2 + 1)/(x^2 - x + c) has domain of all real numbers?" --show_reasoning
 ```
 
 Key arguments:
@@ -51,4 +51,3 @@ Key arguments:
 ## Using Alternative Models
 
 You can swap out OpenAI models for other LLM providers or local models. Refer to the [DSPy documentation](https://github.com/stanfordnlp/dspy) for more information.
-ß

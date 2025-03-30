@@ -1,13 +1,11 @@
-version: '3'
-
 services:
   app:
     build: .
     ports:
-      - "8000:8000"
+      - "8000:8765"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - OPTIMIZED_MODEL_PATH=${OPTIMIZED_MODEL_PATH:-math_reasoning_model.pkl}
+      - OPTIMIZED_MODEL_PATH=${OPTIMIZED_MODEL_PATH:-math_model.pkl}
     volumes:
       - ./:/app
     restart: unless-stopped
