@@ -1,17 +1,15 @@
-import json
 import os
-import pickle
 from typing import Optional
 
-import ujson
-from fastapi import FastAPI, Request, Form, HTTPException
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse
-from pydantic import BaseModel
 import dspy
+import ujson
 import uvicorn
 from dotenv import load_dotenv
+from fastapi import FastAPI, Request, HTTPException
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
 
 load_dotenv()
 
